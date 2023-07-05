@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | grep -E "^[A-Z].*" | xargs mv /tmp/u
+ls | grep -E "^[A-Z].*" | mv * /tmp/u
