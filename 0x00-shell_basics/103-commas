@@ -1,2 +1,2 @@
 #!/bin/bash
-{ printf "./\n../\n"; find . -maxdepth 1 ! -name "." ! -name ".." -type d -printf '%f/\n' | LC_ALL=C sort -k1.1,1.1; find . -maxdepth 1 ! -name "." ! -name ".." -type f -printf '%f\n' | LC_ALL=C sort -k1.1,1.1; } | paste -sd "," - && echo
+ls -ap1 | grep -v "/\|^\.$\|^\.\.$" | LC_ALL=C sort -d | tr '\n' ',' 
