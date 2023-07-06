@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | grep -v "/\|^\.$\|^\.\.$" | LC_ALL=C sort -d | tr '\n' ',' 
+ls -ap1 | LC_COLLATE=C sort -df | tr '\n' ',' | tr -d '\r' | sed 's/,$/\n/'
