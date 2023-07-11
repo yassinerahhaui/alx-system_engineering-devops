@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltF | grep '*' | head -n 10
+ls -ltF | grep '*' | head -n 10 | cut -d ' ' -f 9 | cut -d '*' -f 1
